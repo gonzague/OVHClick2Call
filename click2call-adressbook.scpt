@@ -1,3 +1,6 @@
+# This script is supposed to go in a folder such as Users/gonzague/Library/Address Book Plug-Ins/
+# replace serveur.fr/call.php by the path of your call.php file
+
 using terms from application "Address Book"
 	
 	on action property
@@ -93,7 +96,7 @@ using terms from application "Address Book"
 			notify with name "Telephonie" title "Téléphonie IP" description "Appel du " & Numero & " en cours" application name "Telephonie"
 		end tell
 		
-		do shell script "curl -d c=\"XXXXXXXXXX\" -d n=\"" & Numero & "\" http://serveur.fr/appel.php | textutil -stdin -stdout -format html -convert txt -encoding UTF-8 "
+		do shell script "curl -d c=\"XXXXXXXXXX\" -d n=\"" & Numero & "\" http://serveur.fr/call.php | textutil -stdin -stdout -format html -convert txt -encoding UTF-8 "
 		
 		delay 15
 		
