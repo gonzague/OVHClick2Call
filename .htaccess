@@ -1,0 +1,6 @@
+Options -Indexes
+#Block requests from IPs we havent allowed
+Order Deny,Allow
+Deny from all
+#Allowing our IPs. Think of customizing this
+Allow from XX.XX.XX.XX
